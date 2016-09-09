@@ -39,9 +39,6 @@ img {
 .collection-item {
     cursor: pointer;
 }
-input {
-    width: 100%;
-}
 label.checkbox {
     width: 20px;
     height: 20px;
@@ -55,16 +52,6 @@ label.off {
     background: url(../images/bg_checkbox_off.gif) no-repeat 0px 2px;
     background-size: 20px 20px;
 }
-button {
-    background: rgba(0, 18, 255, 0.44);;
-    height: 30px;
-    border-radius: .2rem;
-    border: 0;
-    padding: .3em;
-    color: white;
-    font-size: 1rem;
-    margin-left: .3em;
-}
 button.setting {
     float: right;
 }
@@ -75,7 +62,7 @@ button.setting {
 }
 div.detail-note-textarea {
     width: auto;
-    height: 50px;
+    height: 100px;
     padding: 5px;
     border-radius: 2px;
     border: rgba(0, 18, 255, 0.44) 1px solid;

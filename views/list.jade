@@ -2,24 +2,35 @@ extends layout
 
 block content
   div#header-operate-button-group
-    button 添加新收藏
-    button#moveToHistory 移入历史
-    button.setting 设置
+    button.btn.btn-default(type='button') 添加新收藏
+    button#moveToHistory.btn.btn-default(type='button') 移入历史
+    button.setting.btn.btn-default(type='button') 设置
   div#collection-item-list
     p Welcome to #{title}
     each l in list
-      div.collection-item
-        label.on.checkbox
-        span.collection-title
-          a(href="#"+l.id)= l.title
-        div(id=l.id class="collection-detail")
-          span= l.title
-          p.detail-site
-            a(href=l.website, target="_blank")= l.website
-          div.detail-body
-            label(for="detail-note-textarea") 备注：
-            div.detail-note-textarea(contenteditable="true")= l.detailNoteText
-            button.save-collection 保存
+      form(role='form')
+        div.checkbox
+          label
+            input(type='checkbox')
+          span&attributes({'data-toggle': 'modal', 'data-target': '#' + l.id})
+            |#{l.title}
+        div.collection-detail.modal.fade(id=l.id)&attributes({'tabindex': -1, 'role': 'dialog', 'aria-labelledby': 'myModalLabel', 'aria-hidden': 'true'})
+          div.modal-dialog
+            div.modal-content
+              div.modal-header
+                button.close(type="button" data-dismiss="modal")
+                  span(aria-hidden="true")&times;
+                  span.sr-only Close
+                h4.modal-title#myModalLabel= l.title
+              div.modal-body
+                p.detail-site
+                  a(href=l.website, target='_blank')= l.website
+                div.detail-body
+                  label(for='detail-note-textarea') 备注：
+                  div.detail-note-textarea(contenteditable='true')= l.detailNoteText
+                div.modal-footer
+                  button.btn.btn-default(type="button" data-dismiss="modal") Close
+                  button.btn.btn-default.save-collection 保存
   div#msg.msg
     p 欢迎使用收藏管理，您可以使用它来替换您的浏览器书签
-  script(type="text/javascript" src="/scripts/list.js")
+  script(type='text/javascript' src='/scripts/list.js')

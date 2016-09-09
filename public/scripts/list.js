@@ -163,14 +163,17 @@
 		warnInfo: function(msg, delay) {
 			//弹出消息
 			var msgDom = document.getElementById('msg');
-			msgDom.className += ' active'
+			msgDom.classList.add('active');
 			msgDom.getElementsByTagName('p')[0].innerHTML = msg;
-			requestAnimationFrame(function() {
+			Collections.warnInfoPromise = new Promise(function(resolve, reject) {
 				setTimeout(function() {
-					var msgDom = document.getElementById('msg');
-					msgDom.className = Collections.__Trim(msgDom.className.replace('active', ''));
+					resolve();
 				}, delay || 2000);
 			});
+			Collections.warnInfoPromise.then(() => {
+				var msgDom = document.getElementById('msg');
+				msgDom.classList.remove('active');
+			})
 		}
 	};
 	
