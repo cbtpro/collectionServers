@@ -1,0 +1,138 @@
+
+html {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    color: #333;
+    overflow: hidden;
+    margin: 0px;
+    padding: 5px;
+    background: white;
+    font-size: 12px;
+}
+a {
+    color: #00B7FF;
+}
+.content {
+    width: auto;
+}
+.content:before {
+    content: '🌹';
+}
+.content:after {
+    content: '😁';
+}
+
+img {
+    margin: 0 4px;
+}
+#add-item-div {
+    color: #ccc;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+.collection-item {
+    cursor: pointer;
+}
+input {
+    width: 100%;
+}
+label.checkbox {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+label.on {
+    background: url(../images/bg_checkbox_on.gif) no-repeat 0px 2px;
+    background-size: 20px 20px;
+}
+label.off {
+    background: url(../images/bg_checkbox_off.gif) no-repeat 0px 2px;
+    background-size: 20px 20px;
+}
+button {
+    background: rgba(0, 18, 255, 0.44);;
+    height: 30px;
+    border-radius: .2rem;
+    border: 0;
+    padding: .3em;
+    color: white;
+    font-size: 1rem;
+    margin-left: .3em;
+}
+button.setting {
+    float: right;
+}
+.collection-detail {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+div.detail-note-textarea {
+    width: auto;
+    height: 50px;
+    padding: 5px;
+    border-radius: 2px;
+    border: rgba(0, 18, 255, 0.44) 1px solid;
+    background-color: #F1F1F1;
+}
+a {
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+.collection-title a {
+    color: #333333;
+}
+:target {
+    display: block;
+}
+.detail-operate-button-group {
+    margin-top: .3rem;
+}
+
+.msg.active{
+    display:block; 
+    transform-origin: 100% 0%; 
+    -webkit-animation: fadeIn 0.5s ease-in-out; 
+    animation: fadeIn 0.5s ease-in-out; 
+} 
+.msg {
+    display: none;
+}
+.msg p{
+    position: relative;
+    margin: 0 auto;
+    text-align: center; 
+    background-color: #1E2021; 
+    padding: 20px;
+    width: 400px;
+    border-radius: 3px; 
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); 
+    color: #FFF; 
+    font-size: 13px; 
+    line-height: 1.4; 
+} 
+@-webkit-keyframes fadeIn { 
+    0% {  
+        opacity:0;  
+        transform: scale(0); 
+    } 
+    30% {
+        opacity: 30%;
+        transform: scale(0.3);
+    }
+    100% { 
+        opacity:100%; 
+        transform: scale(1); 
+    } 
+}
+ 
+@keyframes fadeIn { 
+    0% { opacity:0; } 
+    100% { opacity:100%; } 
+}

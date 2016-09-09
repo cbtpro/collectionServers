@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  div#header-operate-button-group
+    button 添加新收藏
+    button#moveToHistory 移入历史
+    button.setting 设置
+  div#collection-item-list
+    p Welcome to #{title}
+    each l in list
+      div.collection-item
+        label.on.checkbox
+        span.collection-title
+          a(href="#"+l.id)= l.title
+        div(id=l.id class="collection-detail")
+          span= l.title
+          p.detail-site
+            a(href=l.website, target="_blank")= l.website
+          div.detail-body
+            label(for="detail-note-textarea") 备注：
+            div.detail-note-textarea(contenteditable="true")= l.detailNoteText
+            button.save-collection 保存
+  div#msg.msg
+    p 欢迎使用收藏管理，您可以使用它来替换您的浏览器书签
+  script(type="text/javascript" src="/scripts/list.js")
