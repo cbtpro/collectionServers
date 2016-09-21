@@ -29,6 +29,12 @@ exports.list = function(req, res){
 					title: '720云',
 					website: 'http://www.720yun.com/',
 					detailNoteText: '全景视频'
+				},
+				{
+					id: 'WERTY5',
+					title: 'JavaScript 标准参考教程（alpha）',
+					website: 'JavaScript 标准参考教程（alpha）',
+					detailNoteText: '全景视频'
 				}
                 ];
     res.render('list', { title: '收藏列表' , list: list});
