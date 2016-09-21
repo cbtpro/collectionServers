@@ -33,8 +33,14 @@ exports.list = function(req, res){
 				{
 					id: 'WERTY5',
 					title: 'JavaScript 标准参考教程（alpha）',
-					website: 'JavaScript 标准参考教程（alpha）',
-					detailNoteText: '全景视频'
+					website: 'http://javascript.ruanyifeng.com/',
+					detailNoteText: 'JavaScript 标准参考教程（alpha）'
+				},
+				{
+					id: 'WERTY6',
+					title: 'https://coding.net/help/doc/git/',
+					website: 'Git代码托管产品的相关功能说明',
+					detailNoteText: ''
 				}
                 ];
     res.render('list', { title: '收藏列表' , list: list});
